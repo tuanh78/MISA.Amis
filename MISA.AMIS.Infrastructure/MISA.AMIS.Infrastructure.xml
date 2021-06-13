@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MISA.AMIS.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:MISA.AMIS.Infrastructure.Repositories.DepartmentRepository">
+             <summary>
+            
+             </summary>
+        </member>
+    </members>
+</doc>

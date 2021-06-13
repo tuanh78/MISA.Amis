@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MISA.AMIS.API</name>
+    </assembly>
+    <members>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.GetPaging(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lấy dữ liệu theo trang, kích thước trang, và lọc dữ liệu
+            </summary>
+            <returns>Trả về danh sách nhân viên</returns>
+        </member>
+        <member name="T:MISA.AMIS.API.Controllers.DepartmentsController">
+            <summary>
+            API phòng ban
+            </summary>
+            CreatedBy: PTANH (09/6/2021)
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.DepartmentsController.#ctor(MISA.AMIS.Core.Interfaces.Services.IBaseService{MISA.AMIS.Core.Entities.Department})">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="baseService">Lớp base xử lý nghiệp vụ</param>
+            CreatedBy: PTANH (09/6/2021)
+        </member>
+    </members>
+</doc>
