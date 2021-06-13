@@ -4,10 +4,163 @@
         <name>MISA.AMIS.Infrastructure</name>
     </assembly>
     <members>
+        <member name="T:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1">
+            <summary>
+            Repository với những hàm dùng chung
+            </summary>
+            <typeparam name="T">Đối tượng cần tương tác</typeparam>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1._connectionString">
+            <summary>
+            Khởi tạo biến chứa chuỗi kết nối với csdl
+            </summary>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1._dbConnection">
+            <summary>
+            Khởi tạo biến đại diện một kết nối mở đến database
+            </summary>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1._tableName">
+            <summary>
+            Tên bảng
+            </summary>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Hàm khởi tạo của lớp base tương tác với db
+            </summary>
+            <param name="configuration">Biến lấy chuỗi connectionString</param>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.DeleteEntity(System.Guid)">
+            <summary>
+            Hàm xóa một thực thể khỏi csdl
+            </summary>
+            <param name="id">Id của thực thể muốn xóa</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetEntities">
+            <summary>
+            Lấy ra danh sách thực thể
+            </summary>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetEntitiesPaging(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lấy danh sách thực thể theo điều kiện
+            </summary>
+            <param name="pageIndex">Trang hiện tại</param>
+            <param name="pageSize">Số lượng bản ghi trên trang</param>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetEntityById(System.Guid)">
+            <summary>
+            Lấy thực thể theo Id
+            </summary>
+            <param name="id">Id của thực thể</param>
+            <returns>Thông tin thực thể</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetNumberEntities(System.String)">
+            <summary>
+            Lấy số lượng thực thể theo điều kiện
+            </summary>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Số lượng thực thể có trong db</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.InsertEntity(`0)">
+            <summary>
+            Thêm một thực thể vào csdl
+            </summary>
+            <param name="entity">Thông tin thực thể cần thêm</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.UpdateEntity(`0,System.Guid)">
+            <summary>
+            Sửa một thực thể trong db
+            </summary>
+            <param name="entity">Thực thể cần cập nhật</param>
+            <param name="id">Id của thực thể cần cập nhật</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="T:MISA.AMIS.Infrastructure.Repositories.DepartmentRepository">
-             <summary>
-            
-             </summary>
+            <summary>
+            Repository của phòng ban
+            </summary>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.DepartmentRepository.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Hàm khởi tạo của phòng ban
+            </summary>
+            <param name="configuration">Biến để lấy chuỗi kết nối với csdl</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository">
+            <summary>
+            Repository của nhân viên
+            </summary>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="configuration">Biến để lấy chuỗi kết nối với csdl</param>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository.CheckDepartmentExists(MISA.AMIS.Core.Entities.Employee)">
+            <summary>
+            Hàm kiểm tra phòng ban có tồn tại hay không
+            </summary>
+            <param name="employee">Thực thể nhân viên</param>
+            <returns>Tồn tại thì trả về true ngược lại false</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository.CheckEmployeeCodeExists(MISA.AMIS.Core.Entities.Employee)">
+            <summary>
+            Kiểm tra mã khách hàng đã tồn tại hay chưa
+            </summary>
+            <param name="entity">Thực thể khách hàng cần kiểm tra</param>
+            <returns>Tồn tại thì trả về true ngược lại false</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository.GetMaxEmployeeCode">
+            <summary>
+            Lấy ra mã nhân viên lớn nhất
+            </summary>
+            <returns>Mã nhân viên lớn nhất</returns>
+            CreatedDate: 12/06/2021
+            CreatedBy: PTANH
         </member>
     </members>
 </doc>

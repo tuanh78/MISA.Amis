@@ -4,24 +4,146 @@
         <name>MISA.AMIS.API</name>
     </assembly>
     <members>
+        <member name="T:MISA.AMIS.API.Controllers.BaseController`1">
+            <summary>
+            Base Controller chứa các hàm dùng chung
+            </summary>
+            <typeparam name="T">Thực thể cần tương tác</typeparam>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.API.Controllers.BaseController`1._baseService">
+            <summary>
+            Khai báo biến của lớp BaseService
+            </summary>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.#ctor(MISA.AMIS.Core.Interfaces.Services.IBaseService{`0})">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="baseService">Đối tượng của lớp BaseService chứa các hàm dùng chung</param>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.Get">
+            <summary>
+            Lấy danh sách thực thể
+            </summary>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.Get(System.Guid)">
+            <summary>
+            Lấy thực thể theo Id
+            </summary>
+            <param name="id">Id của thực thể</param>
+            <returns>Thực thể cần lấy</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.GetNumberEntities(System.String)">
+            <summary>
+            Lấy số lượng thực thể
+            </summary>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Số lượng thực thể</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.Post(`0)">
+            <summary>
+            Thêm thực thể vào csdl
+            </summary>
+            <param name="entity">Thực thể cần thêm</param>
+            <returns>Số lượng bản ghi được thực hiện</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.Put(System.Guid,`0)">
+            <summary>
+            Sửa thực thể vào csdl
+            </summary>
+            <param name="id">Id của thực thể</param>
+            <param name="entity">Thực thể cần sửa</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.Delete(System.Guid)">
+            <summary>
+            Xóa thực thể khỏi csdl
+            </summary>
+            <param name="id">Id của đối tượng cần xóa</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="M:MISA.AMIS.API.Controllers.BaseController`1.GetPaging(System.Int32,System.Int32,System.String)">
             <summary>
-            Lấy dữ liệu theo trang, kích thước trang, và lọc dữ liệu
+            Lấy danh sách thực thể theo điều kiện
             </summary>
-            <returns>Trả về danh sách nhân viên</returns>
+            <param name="pageIndex">Trang hiện tại</param>
+            <param name="pageSize">Số lượng thực thể trên một trang</param>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.API.Controllers.DepartmentsController">
             <summary>
             API phòng ban
             </summary>
-            CreatedBy: PTANH (09/6/2021)
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.API.Controllers.DepartmentsController.#ctor(MISA.AMIS.Core.Interfaces.Services.IBaseService{MISA.AMIS.Core.Entities.Department})">
             <summary>
             Hàm khởi tạo
             </summary>
             <param name="baseService">Lớp base xử lý nghiệp vụ</param>
-            CreatedBy: PTANH (09/6/2021)
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.API.Controllers.EmployeesController">
+            <summary>
+            Controller của nhân viên
+            </summary>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.API.Controllers.EmployeesController._employeeService">
+            <summary>
+            Khai báo đối tượng của lớp EmployeeService
+            </summary>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.EmployeesController.#ctor(MISA.AMIS.Core.Interfaces.Services.IEmployeeService)">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="employeeService">Đối tượng của lớp EmployeeService</param>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.EmployeesController.GetMaxCode">
+            <summary>
+            Hàm tạo mã nhân viên mới
+            </summary>
+            <returns>Mã nhân viên mới</returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.API.Controllers.EmployeesController.Export">
+            <summary>
+            Hàm xuất file excel
+            </summary>
+            <returns></returns>
+            CreatedDate: 14/06/2021
+            CreatedBy: PTANH
         </member>
     </members>
 </doc>

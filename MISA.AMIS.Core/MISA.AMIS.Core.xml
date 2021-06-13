@@ -8,279 +8,589 @@
             <summary>
             Các Attribute validate dữ liệu
             </summary>
-            CreatedBy: PTANH (7/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Core.Attributes.MISAAttribute.MISARequired">
             <summary>
             Check trùng dữ liệu
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="F:MISA.AMIS.Core.Attributes.MISAAttribute.MISARequired.PropertyName">
             <summary>
             Tên của thuộc tính
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="F:MISA.AMIS.Core.Attributes.MISAAttribute.MISARequired.ErrorMessage">
             <summary>
             Câu thông báo lỗi
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Attributes.MISAAttribute.MISARequired.#ctor(System.String,System.String)">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="propertyName">Tên thuộc tính</param>
+            <param name="errorMessage">Thông báo lỗi</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Entities.BaseEntity">
+            <summary>
+            Lớp base entiy chứa các thuộc tính dùng chung
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.BaseEntity.CreatedBy">
             <summary>
             Người tạo
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.BaseEntity.CreatedDate">
             <summary>
             Ngày tạo
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.BaseEntity.ModifiedBy">
             <summary>
             Người sửa
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.BaseEntity.ModifiedDate">
             <summary>
             Ngày sửa
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Core.Entities.Department">
             <summary>
-            Đối tượng đơn vị
+            Lớp phòng ban
             </summary>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Department.DepartmentId">
             <summary>
             Id đơn vị
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Department.DepartmentName">
             <summary>
             Tên đơn vị
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Department.Description">
             <summary>
             Mô tả
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Core.Entities.Employee">
             <summary>
-            Đối tượng nhân viên
+            Lớp nhân viên
             </summary>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.EmployeeId">
             <summary>
             Id nhân viên
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.EmployeeCode">
             <summary>
             Mã nhân viên
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.EmployeeName">
             <summary>
             Tên nhân viên
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.DateOfBirth">
             <summary>
             Ngày sinh
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.Gender">
             <summary>
             Giới tính
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.DepartmentId">
             <summary>
             Id đơn vị
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.DepartmentName">
             <summary>
             Tên đơn vị
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.IdentityNumber">
             <summary>
             Số CMND
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.IdentityDate">
             <summary>
             Ngày cấp
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.IdentityPlace">
             <summary>
             Nơi cấp
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.EmployeePosition">
             <summary>
             Chức vụ
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.Address">
             <summary>
             Địa chỉ
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.BankAccountNumber">
             <summary>
             Tài khoản ngân hàng
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.BankName">
             <summary>
             Tên ngân hàng
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.BankBranchName">
             <summary>
             Chi nhánh
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.BankProvinceName">
             <summary>
             Tỉnh thành của ngân hàng
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.PhoneNumber">
             <summary>
             Số điện thoại
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.TelephoneNumber">
             <summary>
             Số điện thoại cố định
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="P:MISA.AMIS.Core.Entities.Employee.Email">
             <summary>
             Email
             </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.Employee.GenderName">
+            <summary>
+            Tên giới tính
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Entities.FileExport">
+            <summary>
+            File export
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Entities.FileExport.#ctor(System.IO.MemoryStream,System.String,System.String)">
+            <summary>
+            Hàm khởi tạo có tham số
+            </summary>
+            <param name="fileStream">Stream của file</param>
+            <param name="fileContent">Nội dung file</param>
+            <param name="fileName">Tên file</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.FileExport.FileStream">
+            <summary>
+            Stream của file
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.FileExport.FileContent">
+            <summary>
+            Content file
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.FileExport.FileName">
+            <summary>
+            Tên file
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Entities.PropertyInvalidList">
+            <summary>
+            Lớp thuộc tính không hợp lệ
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.PropertyInvalidList.PropertyName">
+            <summary>
+            Tên thuộc tính
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.PropertyInvalidList.ErrorMessage">
+            <summary>
+            Thông báo lỗi
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Entities.ServiceResult">
+            <summary>
+            Lớp chứa kết quả trả về của xử lý nghiệp vụ
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.ServiceResult.MISACode">
+            <summary>
+            Chứa các mã trả về tương ứng
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.ServiceResult.Data">
+            <summary>
+            Chứa dữ liệu trả về
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.ServiceResult.PropertyInvalidLists">
+            <summary>
+            Danh sách các thuộc tính bị lỗi
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.ServiceResult.ErrorMessage">
+            <summary>
+            Thông báo lỗi chung
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Enums.Gender">
+            <summary>
+            Enum giới tính
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.Gender.Male">
+            <summary>
+            Giới tính nam
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.Gender.Female">
+            <summary>
+            Giới tính nữ
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.Gender.Other">
+            <summary>
+            Giới tính khác
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Enums.MISACode">
+            <summary>
+            Các loại mã khi thực hiện
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.MISACode.Success">
+            <summary>
+            Thành công
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.MISACode.InvalidValue">
+            <summary>
+            Giá trị không hợp lệ
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.MISACode.DuplicateValue">
+            <summary>
+            Dữ liệu bị trùng
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Enums.MISACode.NoContent">
+            <summary>
+            Không có nội dung
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1">
             <summary>
-            Interface base tầng infrastructure tương tác với db
+            Interface Repository với những hàm dùng chung
             </summary>
-            <typeparam name="T">Đối tượng thực hiện</typeparam>
-            CreatedBy: PTANH (5/6/2021)
+            <typeparam name="T">Thực thể cần tương tác</typeparam>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.GetEntities">
             <summary>
-            Lấy danh sách đối tượng
+            Lấy danh sách thực thể
             </summary>
-            <returns>Danh sách đối tượng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.GetEntityById(System.Guid)">
             <summary>
-            Lấy đổi tượng theo Id
+            Lấy thực thể theo Id
             </summary>
-            <param name="id">Id của đối tượng</param>
-            <returns>Đối tượng cần lấy</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <param name="id">Id của thực thể</param>
+            <returns>Thực thể cần lấy theo Id</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.InsertEntity(`0)">
             <summary>
-            Thêm bản ghi
+            Thêm thực thể vào csdl
             </summary>
-            <param name="entity">Đối tượng cần thêm</param>
+            <param name="entity">Thực thể cần thêm</param>
             <returns>Số bản ghi được thực hiện</returns>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.UpdateEntity(`0,System.Guid)">
             <summary>
-            Cập nhật dữ liệu đối tượng
+            Cập nhật thực thể vào csdl
             </summary>
-            <param name="entity">Đối tượng cần cập nhật</param>
-            <param name="id">Id của đối tượng</param>
+            <param name="entity">Thực thể cần cập nhật</param>
+            <param name="id">Id của thực thể</param>
             <returns>Số bản ghi bị ảnh hưởng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.DeleteEntity(System.Guid)">
             <summary>
-            Xóa bản ghi
+            Xóa thực thể khỏi csdl
             </summary>
-            <param name="id">Id của đối tượng cần xóa</param>
+            <param name="id">Id của thực thể cần xóa</param>
             <returns>Só bản ghi bị ảnh hưởng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.GetEntitiesPaging(System.Int32,System.Int32,System.String)">
             <summary>
-            Lấy danh sách đối tượng theo trang và lọc dữ liệu
+            Lấy danh sách thực thể theo điều kiện
             </summary>
-            <returns>Danh sách đối tượng</returns>
-            CreatedBy: PTANH (7/6/2021)
+            <param name="pageIndex">Trang hiện tại</param>
+            <param name="pageSize">Số lượng thực thể trên một trang</param>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.GetNumberEntities(System.String)">
+            <summary>
+            Lấy số lượng thực thể theo điều kiện
+            </summary>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Số lượng bản ghi</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Interfaces.Repositories.IDepartmentRepository">
+            <summary>
+            Interface repository của phòng ban
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository">
+            <summary>
+            Interface repository của nhân viên
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository.CheckEmployeeCodeExists(MISA.AMIS.Core.Entities.Employee)">
+            <summary>
+            Hàm kiểm tra mã nhân viên đã tồn tại chưa
+            </summary>
+            <param name="employee">Nhân viên cần kiểm tra</param>
+            <returns>Tồn tại thì trả về true ngược lại false</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository.CheckDepartmentExists(MISA.AMIS.Core.Entities.Employee)">
+            <summary>
+            Hàm kiểm tra xem phòng ban có tồn tại hay không
+            </summary>
+            <param name="employee">Nhân viên cần kiểm tra</param>
+            <returns>Tồn tại thì trả về true ngược lại false</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository.GetMaxEmployeeCode">
+            <summary>
+            Hàm lấy mã nhân viên lớn nhất
+            </summary>
+            <returns>Mã nhân viên lớn nhất</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Core.Interfaces.Services.IBaseService`1">
             <summary>
-            Interface của tầng xử lý nghiệp vụ
+            Interface Service những hàm dùng chung
             </summary>
-            <typeparam name="T">Đối tượng cần tương tác</typeparam>
+            <typeparam name="T">Thực thể cần tương tác</typeparam>
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.GetEntities">
             <summary>
-            Lấy danh sách đối tượng
+            Lấy danh sách Thực thể
             </summary>
-            <returns>Danh sách đối tượng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.GetEntityById(System.Guid)">
             <summary>
-            Lấy đổi tượng theo Id
+            Lấy thực thể theo Id
             </summary>
-            <param name="id">Id của đối tượng</param>
-            <returns>Đối tượng cần lấy</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <param name="id">Id của thực thể</param>
+            <returns>Thực thể cần lấy</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.InsertEntity(`0)">
             <summary>
-            Thêm bản ghi
+            Thêm thực thể vào csdl
             </summary>
-            <param name="entity">Đối tượng cần thêm</param>
-            <returns>Số bản ghi được thực hiện</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <param name="entity">Thực thể cần thêm</param>
+            <returns>Số bản ghi được thực hiện, MISACode, thông báo lỗi nếu có</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.UpdateEntity(`0,System.Guid)">
             <summary>
-            Cập nhật dữ liệu đối tượng
+            Cập nhật thực thể vào csdl
             </summary>
-            <param name="entity">Đối tượng cần cập nhật</param>
-            <param name="id">Id của đối tượng</param>
-            <returns>Số bản ghi bị ảnh hưởng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            <param name="entity">Thực thể cần cập nhật</param>
+            <param name="id">Id của thực thể</param>
+            <returns>Số bản ghi bị ảnh hưởng, MISACode, thông báo lỗi nếu có</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.DeleteEntity(System.Guid)">
             <summary>
-            Xóa bản ghi
+            Xóa thực thể khỏi csdl
             </summary>
-            <param name="id">Id của đối tượng cần xóa</param>
+            <param name="id">Id của thực thể cần xóa</param>
             <returns>Só bản ghi bị ảnh hưởng</returns>
-            CreatedBy: PTANH (5/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.GetEntitiesPaging(System.Int32,System.Int32,System.String)">
             <summary>
-            Lấy danh sách đối tượng theo trang và lọc dữ liệu
+            Lấy danh sách thực thể theo điều kiện
             </summary>
-            <returns>Danh sách đối tượng</returns>
-            CreatedBy: PTANH (7/6/2021)
+            <param name="pageIndex">Trang hiện tại</param>
+            <param name="pageSize">Số thực thể trên một trang</param>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.ValidateData(`0)">
             <summary>
             Validate dữ liệu
             </summary>
-            <param name="entity">Đối tượng cần validate</param>
+            <param name="entity">Thực thể cần validate</param>
             <returns>Đối tượng service result</returns>
-            CreatedBy: PTANH (7/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
         <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.CustomValidate(`0)">
             <summary>
@@ -288,7 +598,174 @@
             </summary>
             <param name="entity">Đối tượng cần validate</param>
             <returns>Đối tượng service result</returns>
-            CreatedBy: PTANH (7/6/2021)
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.GetNumberEntities(System.String)">
+            <summary>
+            Lấy số lượng thực thể theo điều kiện
+            </summary>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Tổng số lượng thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Interfaces.Services.IDepartmentService">
+            <summary>
+            Interface service của phòng ban
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Interfaces.Services.IEmployeeService">
+            <summary>
+            Interface service của nhân viên
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Services.IEmployeeService.GetMaxEmployeeCode">
+            <summary>
+            Lấy ra mã nhân viên lớn nhất
+            </summary>
+            <returns>Mã nhân viên lớn nhất</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Services.IEmployeeService.ExportExcel">
+            <summary>
+            Xuất list ra file excel
+            </summary>
+            <returns></returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Properties.ExcelExportResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_BANK_ACCOUNT_NUMBER">
+            <summary>
+              Looks up a localized string similar to Số tài khoản.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_BANK_NAME">
+            <summary>
+              Looks up a localized string similar to Tên ngân hàng.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_CODE">
+            <summary>
+              Looks up a localized string similar to Mã nhân viên.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_DEPARTMENT">
+            <summary>
+              Looks up a localized string similar to Tên đơn vị.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_DOB">
+            <summary>
+              Looks up a localized string similar to Ngày sinh.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_GENDER">
+            <summary>
+              Looks up a localized string similar to Giới tính.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_INDEX">
+            <summary>
+              Looks up a localized string similar to STT.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_NAME">
+            <summary>
+              Looks up a localized string similar to Tên nhân viên.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.COLUMN_POSITION">
+            <summary>
+              Looks up a localized string similar to Chức danh.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.DATE_FORMAT">
+            <summary>
+              Looks up a localized string similar to dd/MM/yyyy.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.FILE_NAME">
+            <summary>
+              Looks up a localized string similar to Danh_sach_nhan_vien.xlsx.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.FILE_TYPE">
+            <summary>
+              Looks up a localized string similar to application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.FIRST_ROW">
+            <summary>
+              Looks up a localized string similar to A1:I1.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.THIRD_ROW">
+            <summary>
+              Looks up a localized string similar to A3:I3.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.ExcelExportResource.TITLE">
+            <summary>
+              Looks up a localized string similar to DANH SÁCH NHÂN VIÊN.
+            </summary>
+        </member>
+        <member name="T:MISA.AMIS.Core.Properties.GenderResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.Female">
+            <summary>
+              Looks up a localized string similar to Nữ.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.Male">
+            <summary>
+              Looks up a localized string similar to Nam.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.Other">
+            <summary>
+              Looks up a localized string similar to Khác.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.GenderResource.Unknow">
+            <summary>
+              Looks up a localized string similar to Không xác định.
+            </summary>
         </member>
         <member name="T:MISA.AMIS.Core.Properties.Resources">
             <summary>
@@ -304,6 +781,11 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.Resources.EmployeeCode_NotExists">
+            <summary>
+              Looks up a localized string similar to Không có mã nhân viên nào.
             </summary>
         </member>
         <member name="P:MISA.AMIS.Core.Properties.Resources.Error_DepartmentNotExists">
@@ -325,6 +807,190 @@
             <summary>
               Looks up a localized string similar to không được để trống.
             </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.Resources.Female">
+            <summary>
+              Looks up a localized string similar to 1.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.Resources.Male">
+            <summary>
+              Looks up a localized string similar to 0.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.Resources.Other">
+            <summary>
+              Looks up a localized string similar to 2.
+            </summary>
+        </member>
+        <member name="T:MISA.AMIS.Core.Services.BaseService`1">
+            <summary>
+            Service chứa các hàm dùng chung
+            </summary>
+            <typeparam name="T">Thực thể cần tương tác</typeparam>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Services.BaseService`1._baseRepository">
+            <summary>
+            Khai báo biến của lớp BaseRepository
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="F:MISA.AMIS.Core.Services.BaseService`1._serviceResult">
+            <summary>
+            Biến chứa kết quả trả về, MISACode, thông báo lỗi nếu có
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.#ctor(MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository{`0})">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="baseRepository">Khởi tạo đối tượng từ class BaseRepository</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.DeleteEntity(System.Guid)">
+            <summary>
+            Hàm xóa thực thể khỏi csdl
+            </summary>
+            <param name="id">Id của thực thể cần xóa</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.GetEntities">
+            <summary>
+            Lấy danh sách thực thể
+            </summary>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.GetEntityById(System.Guid)">
+            <summary>
+            Lấy thực thể theo Id
+            </summary>
+            <param name="id">Id của thực thể</param>
+            <returns>Thực thể cần lấy</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.InsertEntity(`0)">
+            <summary>
+            Thêm thực thể vào csdl
+            </summary>
+            <param name="entity">Thực thể cần thêm</param>
+            <returns>Số lượng bản ghi thực hiện</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.UpdateEntity(`0,System.Guid)">
+            <summary>
+            Cập nhật thực thể vào csdl
+            </summary>
+            <param name="entity">Thực thể cần cập nhật dữ liệu</param>
+            <param name="id">Id của thực thể</param>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.ValidateData(`0)">
+            <summary>
+            Hàm Validate dữ liệu
+            </summary>
+            <param name="entity">Thực thể cần validate dữ liệu</param>
+            <returns>MISACode, thông báo lỗi nếu có</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.CustomValidate(`0)">
+            <summary>
+            Hàm cho phép validate dữ liệu theo ý muốn
+            </summary>
+            <param name="entity">Thực thể cần validate dữ liệu</param>
+            <returns>Kết quả thực hiện</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.GetEntitiesPaging(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lấy danh sách thực thể theo điều kiện
+            </summary>
+            <param name="pageIndex">Trang hiên tại</param>
+            <param name="pageSize">Số lượng thực thể trên một trang</param>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Danh sách thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.GetNumberEntities(System.String)">
+            <summary>
+            Số lượng thực thể theo điều kiện
+            </summary>
+            <param name="filter">Điều kiện lọc dữ liệu</param>
+            <returns>Số lượng thực thể</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Services.DepartmentService">
+            <summary>
+            Service của phòng ban
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.DepartmentService.#ctor(MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository{MISA.AMIS.Core.Entities.Department})">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="baseRepository">Đối tượng của lớp BaseRepository chứa các hàm chung tương tác với csdl</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="T:MISA.AMIS.Core.Services.EmployeeService">
+            <summary>
+            Service của nhân viên
+            </summary>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.EmployeeService.#ctor(MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository{MISA.AMIS.Core.Entities.Employee},MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository)">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+            <param name="baseRepository">Biến của đối tượng BaseRepository</param>
+            <param name="employeeRepository">Biến của đối tượng EmployeeRepository</param>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.EmployeeService.CustomValidate(MISA.AMIS.Core.Entities.Employee)">
+            <summary>
+            Hàm validate dữ liệu tùy chỉnh
+            </summary>
+            <param name="entity">Đối tượng cần validate dữ liệu</param>
+            <returns>Kết quả thực hiện</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.EmployeeService.ExportExcel">
+            <summary>
+            Xuất list ra file excel
+            </summary>
+            <returns></returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Services.EmployeeService.GetMaxEmployeeCode">
+            <summary>
+            Lấy mã nhân viên mới
+            </summary>
+            <returns>Mã nhân viên lớn nhất</returns>
+            CreatedDate: 13/06/2021
+            CreatedBy: PTANH
         </member>
     </members>
 </doc>

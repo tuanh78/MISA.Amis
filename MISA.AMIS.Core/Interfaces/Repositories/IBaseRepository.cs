@@ -4,66 +4,78 @@ using System.Collections.Generic;
 namespace MISA.AMIS.Core.Interfaces.Repositories
 {
     /// <summary>
-    /// Interface base tầng infrastructure tương tác với db
+    /// Interface Repository với những hàm dùng chung
     /// </summary>
-    /// <typeparam name="T">Đối tượng thực hiện</typeparam>
-    /// CreatedBy: PTANH (5/6/2021)
+    /// <typeparam name="T">Thực thể cần tương tác</typeparam>
+    /// CreatedDate: 13/06/2021
+    /// CreatedBy: PTANH
     public interface IBaseRepository<T> where T : class
     {
         /// <summary>
-        /// Lấy danh sách đối tượng
+        /// Lấy danh sách thực thể
         /// </summary>
-        /// <returns>Danh sách đối tượng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <returns>Danh sách thực thể</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public IEnumerable<T> GetEntities();
 
         /// <summary>
-        /// Lấy đổi tượng theo Id
+        /// Lấy thực thể theo Id
         /// </summary>
-        /// <param name="id">Id của đối tượng</param>
-        /// <returns>Đối tượng cần lấy</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <param name="id">Id của thực thể</param>
+        /// <returns>Thực thể cần lấy theo Id</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public T GetEntityById(Guid id);
 
         /// <summary>
-        /// Thêm bản ghi
+        /// Thêm thực thể vào csdl
         /// </summary>
-        /// <param name="entity">Đối tượng cần thêm</param>
+        /// <param name="entity">Thực thể cần thêm</param>
         /// <returns>Số bản ghi được thực hiện</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
 
         public int InsertEntity(T entity);
 
         /// <summary>
-        /// Cập nhật dữ liệu đối tượng
+        /// Cập nhật thực thể vào csdl
         /// </summary>
-        /// <param name="entity">Đối tượng cần cập nhật</param>
-        /// <param name="id">Id của đối tượng</param>
+        /// <param name="entity">Thực thể cần cập nhật</param>
+        /// <param name="id">Id của thực thể</param>
         /// <returns>Số bản ghi bị ảnh hưởng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public int UpdateEntity(T entity, Guid id);
 
         /// <summary>
-        /// Xóa bản ghi
+        /// Xóa thực thể khỏi csdl
         /// </summary>
-        /// <param name="id">Id của đối tượng cần xóa</param>
+        /// <param name="id">Id của thực thể cần xóa</param>
         /// <returns>Só bản ghi bị ảnh hưởng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public int DeleteEntity(Guid id);
 
         /// <summary>
-        /// Lấy danh sách đối tượng theo trang và lọc dữ liệu
+        /// Lấy danh sách thực thể theo điều kiện
         /// </summary>
-        /// <returns>Danh sách đối tượng</returns>
-        /// CreatedBy: PTANH (7/6/2021)
+        /// <param name="pageIndex">Trang hiện tại</param>
+        /// <param name="pageSize">Số lượng thực thể trên một trang</param>
+        /// <param name="filter">Điều kiện lọc dữ liệu</param>
+        /// <returns>Danh sách thực thể</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
+
         public IEnumerable<T> GetEntitiesPaging(int pageIndex, int pageSize, string filter);
 
         /// <summary>
-        /// Lấy tổng số lượng bản ghi theo điều kiện
+        /// Lấy số lượng thực thể theo điều kiện
         /// </summary>
-        /// <param name="filter">Điều kiện</param>
-        /// <returns>Tổng số lượng bản ghi</returns>
-        /// CreatedBy: PTANH (13/06/2021)
+        /// <param name="filter">Điều kiện lọc dữ liệu</param>
+        /// <returns>Số lượng bản ghi</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public int GetNumberEntities(string filter);
     }
 }

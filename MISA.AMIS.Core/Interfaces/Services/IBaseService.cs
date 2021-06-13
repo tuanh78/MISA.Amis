@@ -5,65 +5,75 @@ using System.Collections.Generic;
 namespace MISA.AMIS.Core.Interfaces.Services
 {
     /// <summary>
-    /// Interface của tầng xử lý nghiệp vụ
+    /// Interface Service những hàm dùng chung
     /// </summary>
-    /// <typeparam name="T">Đối tượng cần tương tác</typeparam>
+    /// <typeparam name="T">Thực thể cần tương tác</typeparam>
     public interface IBaseService<T> where T : class
     {
         /// <summary>
-        /// Lấy danh sách đối tượng
+        /// Lấy danh sách Thực thể
         /// </summary>
-        /// <returns>Danh sách đối tượng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <returns>Danh sách thực thể</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public IEnumerable<T> GetEntities();
 
         /// <summary>
-        /// Lấy đổi tượng theo Id
+        /// Lấy thực thể theo Id
         /// </summary>
-        /// <param name="id">Id của đối tượng</param>
-        /// <returns>Đối tượng cần lấy</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <param name="id">Id của thực thể</param>
+        /// <returns>Thực thể cần lấy</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult GetEntityById(Guid id);
 
         /// <summary>
-        /// Thêm bản ghi
+        /// Thêm thực thể vào csdl
         /// </summary>
-        /// <param name="entity">Đối tượng cần thêm</param>
-        /// <returns>Số bản ghi được thực hiện</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <param name="entity">Thực thể cần thêm</param>
+        /// <returns>Số bản ghi được thực hiện, MISACode, thông báo lỗi nếu có</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
 
         public ServiceResult InsertEntity(T entity);
 
         /// <summary>
-        /// Cập nhật dữ liệu đối tượng
+        /// Cập nhật thực thể vào csdl
         /// </summary>
-        /// <param name="entity">Đối tượng cần cập nhật</param>
-        /// <param name="id">Id của đối tượng</param>
-        /// <returns>Số bản ghi bị ảnh hưởng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// <param name="entity">Thực thể cần cập nhật</param>
+        /// <param name="id">Id của thực thể</param>
+        /// <returns>Số bản ghi bị ảnh hưởng, MISACode, thông báo lỗi nếu có</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult UpdateEntity(T entity, Guid id);
 
         /// <summary>
-        /// Xóa bản ghi
+        /// Xóa thực thể khỏi csdl
         /// </summary>
-        /// <param name="id">Id của đối tượng cần xóa</param>
+        /// <param name="id">Id của thực thể cần xóa</param>
         /// <returns>Só bản ghi bị ảnh hưởng</returns>
-        /// CreatedBy: PTANH (5/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult DeleteEntity(Guid id);
 
         /// <summary>
-        /// Lấy danh sách đối tượng theo trang và lọc dữ liệu
+        /// Lấy danh sách thực thể theo điều kiện
         /// </summary>
-        /// <returns>Danh sách đối tượng</returns>
-        /// CreatedBy: PTANH (7/6/2021)
+        /// <param name="pageIndex">Trang hiện tại</param>
+        /// <param name="pageSize">Số thực thể trên một trang</param>
+        /// <param name="filter">Điều kiện lọc dữ liệu</param>
+        /// <returns>Danh sách thực thể</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult GetEntitiesPaging(int pageIndex, int pageSize, string filter);
 
         /// <summary>
         /// Validate dữ liệu
         /// </summary>
-        /// <param name="entity">Đối tượng cần validate</param>
+        /// <param name="entity">Thực thể cần validate</param>
         /// <returns>Đối tượng service result</returns>
-        /// CreatedBy: PTANH (7/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult ValidateData(T entity);
 
         /// <summary>
@@ -71,15 +81,17 @@ namespace MISA.AMIS.Core.Interfaces.Services
         /// </summary>
         /// <param name="entity">Đối tượng cần validate</param>
         /// <returns>Đối tượng service result</returns>
-        /// CreatedBy: PTANH (7/6/2021)
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public ServiceResult CustomValidate(T entity);
 
         /// <summary>
-        /// Lấy tổng số lượng bản ghi theo điều kiện
+        /// Lấy số lượng thực thể theo điều kiện
         /// </summary>
-        /// <param name="filter">Điều kiện</param>
-        /// <returns>Tổng số lượng bản ghi</returns>
-        /// CreatedBy: PTANH (13/06/2021)
+        /// <param name="filter">Điều kiện lọc dữ liệu</param>
+        /// <returns>Tổng số lượng thực thể</returns>
+        /// CreatedDate: 13/06/2021
+        /// CreatedBy: PTANH
         public int GetNumberEntities(string filter);
     }
 }

@@ -9,7 +9,8 @@ namespace MISA.AMIS.API.Controllers
     /// <summary>
     /// API phòng ban
     /// </summary>
-    /// CreatedBy: PTANH (09/6/2021)
+    /// CreatedDate: 14/06/2021
+    /// CreatedBy: PTANH
     [Route("api/v1/[controller]")]
     [ApiController]
     public class DepartmentsController : BaseController<Department>
@@ -18,7 +19,8 @@ namespace MISA.AMIS.API.Controllers
         /// Hàm khởi tạo
         /// </summary>
         /// <param name="baseService">Lớp base xử lý nghiệp vụ</param>
-        /// CreatedBy: PTANH (09/6/2021)
+        /// CreatedDate: 14/06/2021
+        /// CreatedBy: PTANH
         public DepartmentsController(IBaseService<Department> baseService) : base(baseService)
         {
         }
