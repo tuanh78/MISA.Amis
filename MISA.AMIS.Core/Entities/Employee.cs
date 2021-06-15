@@ -104,7 +104,7 @@ namespace MISA.AMIS.Core.Entities
         /// </summary>
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
-        public long? BankAccountNumber { get; set; }
+        public string BankAccountNumber { get; set; }
 
         /// <summary>
         /// Tên ngân hàng
