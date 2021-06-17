@@ -136,7 +136,13 @@ namespace MISA.AMIS.API.Controllers
             // Kết quả sửa thực thể
             var serviceResult = _baseService.UpdateEntity(entity, id);
             // Trả về kết quả
-            return Ok(serviceResult);
+            // Nếu thành công
+            if (serviceResult.MISACode == MISACode.Success)
+            {
+                return Ok(serviceResult);
+            }
+            // Thêm thất bại
+            return BadRequest(serviceResult);
         }
 
         /// <summary>
