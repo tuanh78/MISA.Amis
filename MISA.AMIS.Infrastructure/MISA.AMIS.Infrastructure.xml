@@ -78,6 +78,12 @@
             CreatedDate: 12/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetCodeRule">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
         <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetNumberEntities(System.String)">
             <summary>
             Lấy số lượng thực thể theo điều kiện
@@ -104,6 +110,14 @@
             <param name="id">Id của thực thể cần cập nhật</param>
             <returns>Số lượng bản ghi bị ảnh hưởng</returns>
             CreatedDate: 12/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.UpdateValueCodeRule">
+            <summary>
+            Cập nhật mã của bảng
+            </summary>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 17/06/2021
             CreatedBy: PTANH
         </member>
         <member name="T:MISA.AMIS.Infrastructure.Repositories.DepartmentRepository">
@@ -151,14 +165,6 @@
             </summary>
             <param name="entity">Thực thể khách hàng cần kiểm tra</param>
             <returns>Tồn tại thì trả về true ngược lại false</returns>
-            CreatedDate: 12/06/2021
-            CreatedBy: PTANH
-        </member>
-        <member name="M:MISA.AMIS.Infrastructure.Repositories.EmployeeRepository.GetMaxEmployeeCode">
-            <summary>
-            Lấy ra mã nhân viên lớn nhất
-            </summary>
-            <returns>Mã nhân viên lớn nhất</returns>
             CreatedDate: 12/06/2021
             CreatedBy: PTANH
         </member>

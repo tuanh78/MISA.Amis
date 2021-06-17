@@ -76,6 +76,48 @@
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="T:MISA.AMIS.Core.Entities.CodeRule">
+            <summary>
+            Lớp quy tắc mã của các bảng
+            </summary>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.CodeRule.CodeRuleId">
+            <summary>
+            Id của CodeRule
+            </summary>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.CodeRule.Prefix">
+            <summary>
+            Tiền tố của mã
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.CodeRule.TableName">
+            <summary>
+            Tên bảng
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.CodeRule.Value">
+            <summary>
+            Số của mã nhân viên mới nhất
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Entities.CodeRule.Length">
+            <summary>
+            Độ dài của mã
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+            </summary>
+        </member>
         <member name="T:MISA.AMIS.Core.Entities.Department">
             <summary>
             Lớp phòng ban
@@ -481,6 +523,22 @@
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.GetCodeRule">
+            <summary>
+            Lấy mã mới
+            </summary>
+            <returns>Nguyên tắc của mã</returns>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1.UpdateValueCodeRule">
+            <summary>
+            Cập nhật value của mã
+            </summary>
+            <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="T:MISA.AMIS.Core.Interfaces.Repositories.IDepartmentRepository">
             <summary>
             Interface repository của phòng ban
@@ -510,14 +568,6 @@
             </summary>
             <param name="employee">Nhân viên cần kiểm tra</param>
             <returns>Tồn tại thì trả về true ngược lại false</returns>
-            CreatedDate: 13/06/2021
-            CreatedBy: PTANH
-        </member>
-        <member name="M:MISA.AMIS.Core.Interfaces.Repositories.IEmployeeRepository.GetMaxEmployeeCode">
-            <summary>
-            Hàm lấy mã nhân viên lớn nhất
-            </summary>
-            <returns>Mã nhân viên lớn nhất</returns>
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
@@ -610,6 +660,14 @@
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="M:MISA.AMIS.Core.Interfaces.Services.IBaseService`1.GetNewCode">
+            <summary>
+            Lấy mã mới của bảng
+            </summary>
+            <returns>Mã mới của bảng</returns>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="T:MISA.AMIS.Core.Interfaces.Services.IDepartmentService">
             <summary>
             Interface service của phòng ban
@@ -621,14 +679,6 @@
             <summary>
             Interface service của nhân viên
             </summary>
-            CreatedDate: 13/06/2021
-            CreatedBy: PTANH
-        </member>
-        <member name="M:MISA.AMIS.Core.Interfaces.Services.IEmployeeService.GetMaxEmployeeCode">
-            <summary>
-            Lấy ra mã nhân viên lớn nhất
-            </summary>
-            <returns>Mã nhân viên lớn nhất</returns>
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
@@ -936,6 +986,14 @@
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="M:MISA.AMIS.Core.Services.BaseService`1.GetNewCode">
+            <summary>
+            Lấy mã mới của bảng
+            </summary>
+            <returns>Mã mới của bảng</returns>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="T:MISA.AMIS.Core.Services.DepartmentService">
             <summary>
             Service của phòng ban
@@ -981,14 +1039,6 @@
             Xuất list ra file excel
             </summary>
             <returns></returns>
-            CreatedDate: 13/06/2021
-            CreatedBy: PTANH
-        </member>
-        <member name="M:MISA.AMIS.Core.Services.EmployeeService.GetMaxEmployeeCode">
-            <summary>
-            Lấy mã nhân viên mới
-            </summary>
-            <returns>Mã nhân viên lớn nhất</returns>
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>

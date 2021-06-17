@@ -92,6 +92,14 @@
             CreatedDate: 14/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="M:MISA.AMIS.API.Controllers.BaseController`1.GetNewCode">
+            <summary>
+            Lấy mã mới nhất của bảng
+            </summary>
+            <returns>Mã mới nhất của bảng</returns>
+            CreatedDate: 17/06/2021
+            CreatedBy: PTANH
+        </member>
         <member name="T:MISA.AMIS.API.Controllers.DepartmentsController">
             <summary>
             API phòng ban
@@ -126,14 +134,6 @@
             Hàm khởi tạo
             </summary>
             <param name="employeeService">Đối tượng của lớp EmployeeService</param>
-            CreatedDate: 14/06/2021
-            CreatedBy: PTANH
-        </member>
-        <member name="M:MISA.AMIS.API.Controllers.EmployeesController.GetMaxCode">
-            <summary>
-            Hàm tạo mã nhân viên mới
-            </summary>
-            <returns>Mã nhân viên mới</returns>
             CreatedDate: 14/06/2021
             CreatedBy: PTANH
         </member>

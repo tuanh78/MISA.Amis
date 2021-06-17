@@ -351,7 +351,7 @@ namespace MISA.AMIS.Core.Services
             var codeRule = _baseRepository.GetCodeRule();
             var prefix = codeRule.Prefix.Trim();
             var valueCode = codeRule.Value;
-            var newCode = prefix + valueCode.ToString();
+            var newCode = prefix + valueCode.ToString("D4");
             return newCode;
         }
 
