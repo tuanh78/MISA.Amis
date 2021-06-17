@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MISA.AMIS.Core.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace MISA.AMIS.Core.Interfaces.Repositories
@@ -77,5 +78,21 @@ namespace MISA.AMIS.Core.Interfaces.Repositories
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
         public int GetNumberEntities(string filter);
+
+        /// <summary>
+        /// Lấy mã mới
+        /// </summary>
+        /// <returns>Nguyên tắc của mã</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        public CodeRule GetCodeRule();
+
+        /// <summary>
+        /// Cập nhật value của mã
+        /// </summary>
+        /// <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        public int UpdateValueCodeRule();
     }
 }

@@ -205,47 +205,6 @@ namespace MISA.AMIS.Core.Services
             return new FileExport(stream, ExcelExportResource.FILE_TYPE, excelName);
         }
 
-        /// <summary>
-        /// Lấy mã nhân viên mới
-        /// </summary>
-        /// <returns>Mã nhân viên lớn nhất</returns>
-        /// CreatedDate: 13/06/2021
-        /// CreatedBy: PTANH
-        public ServiceResult GetMaxEmployeeCode()
-        {
-            // Lấy mã nhân viên mới nhất và xóa bỏ khoảng trắng ở hai đầu
-            string maxEmployeeCode = _employeeRepository.GetMaxEmployeeCode().Trim();
-            // Khởi tạo biến chứa giá trị trả về
-            var serviceResult = new ServiceResult();
-            // Nếu tồn tại mã nhân viên lớn nhất
-            if (maxEmployeeCode != null || maxEmployeeCode != string.Empty)
-            {
-                // Cắt mã nhân viên thành mảng
-                string[] strEmployeeCode = maxEmployeeCode.Split('-');
-                // Số của mã nhân viên
-                // Ép kiểu số của mã nhân viên về int
-                _ = int.TryParse(strEmployeeCode[1], out int numberEmployee);
-                // Tăng số của mã nhân viên lên 1 đơn vị
-                numberEmployee++;
-                // Nối chuỗi thành mã của nhân viên mới
-                string employeeCode = strEmployeeCode[0] + '-' + numberEmployee.ToString();
-                // Mã nhân viên mới vào data
-                serviceResult.Data = employeeCode;
-                // Gán thông báo thành công
-                serviceResult.MISACode = MISACode.Success;
-            }
-            else
-            {
-                // Nếu không tồn tại mã nhân viên nào thì gán mặc định
-                serviceResult.Data = "NV-0001";
-                // Gán mã không có dữ liệu
-                serviceResult.MISACode = MISACode.NoContent;
-                // Gán thông báo lỗi mã nhân viên không tồn tại
-                serviceResult.ErrorMessage = Resources.EmployeeCode_NotExists;
-            }
-            return serviceResult;
-        }
-
         #endregion Phương thức
     }
 }

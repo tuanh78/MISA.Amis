@@ -198,6 +198,19 @@ namespace MISA.AMIS.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Lấy mã mới nhất của bảng
+        /// </summary>
+        /// <returns>Mã mới nhất của bảng</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        [HttpGet("new-code")]
+        public IActionResult GetNewCode()
+        {
+            var newCode = _baseService.GetNewCode();
+            return Ok(newCode);
+        }
+
         #endregion Phương thức
     }
 }

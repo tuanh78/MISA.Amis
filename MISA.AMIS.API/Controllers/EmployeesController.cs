@@ -45,27 +45,6 @@ namespace MISA.AMIS.API.Controllers
         #region Phương thức
 
         /// <summary>
-        /// Hàm tạo mã nhân viên mới
-        /// </summary>
-        /// <returns>Mã nhân viên mới</returns>
-        /// CreatedDate: 14/06/2021
-        /// CreatedBy: PTANH
-        // GET: api/<BaseController>
-        [HttpGet("max-employee-code")]
-        public IActionResult GetMaxCode()
-        {
-            // Kết quả tạo mã nhân viên mới nhất
-            var serviceResult = _employeeService.GetMaxEmployeeCode();
-            // Nếu thành công
-            if (serviceResult.MISACode == MISACode.Success)
-            {
-                return Ok(serviceResult.Data);
-            }
-            // Không thành công
-            return NoContent();
-        }
-
-        /// <summary>
         /// Hàm xuất file excel
         /// </summary>
         /// <returns></returns>

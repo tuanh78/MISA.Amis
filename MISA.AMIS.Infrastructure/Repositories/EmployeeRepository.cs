@@ -74,22 +74,6 @@ namespace MISA.AMIS.Infrastructure.Repositories
             return result;
         }
 
-        /// <summary>
-        /// Lấy ra mã nhân viên lớn nhất
-        /// </summary>
-        /// <returns>Mã nhân viên lớn nhất</returns>
-        /// CreatedDate: 12/06/2021
-        /// CreatedBy: PTANH
-        public string GetMaxEmployeeCode()
-        {
-            // Tên Proc lấy mã nhân viên lớn nhất
-            var sql = "Proc_GetMaxEmployeeCode";
-            // Thực thi Proc
-            string maxEmployeeCode = _dbConnection.Query<string>(sql, null, commandType: CommandType.StoredProcedure).FirstOrDefault();
-            // Trả về chuỗi mã nhân viên lớn nhất
-            return maxEmployeeCode;
-        }
-
         #endregion Phương thức
     }
 }

@@ -26,13 +26,5 @@ namespace MISA.AMIS.Core.Interfaces.Repositories
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
         public bool CheckDepartmentExists(Employee employee);
-
-        /// <summary>
-        /// Hàm lấy mã nhân viên lớn nhất
-        /// </summary>
-        /// <returns>Mã nhân viên lớn nhất</returns>
-        /// CreatedDate: 13/06/2021
-        /// CreatedBy: PTANH
-        public string GetMaxEmployeeCode();
     }
 }

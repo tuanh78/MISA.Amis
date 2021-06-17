@@ -93,5 +93,13 @@ namespace MISA.AMIS.Core.Interfaces.Services
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
         public int GetNumberEntities(string filter);
+
+        /// <summary>
+        /// Lấy mã mới của bảng
+        /// </summary>
+        /// <returns>Mã mới của bảng</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        public string GetNewCode();
     }
 }

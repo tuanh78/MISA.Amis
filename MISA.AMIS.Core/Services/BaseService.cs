@@ -6,6 +6,7 @@ using MISA.AMIS.Core.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using static MISA.AMIS.Core.Attributes.MISAAttribute;
 
 namespace MISA.AMIS.Core.Services
@@ -157,6 +158,17 @@ namespace MISA.AMIS.Core.Services
                 // Kiểm tra xem có thêm thành công hay không
                 if (rowAffects == 1)
                 {
+                    // Cập nhật mã của bảng
+                    var codeRule = _baseRepository.GetCodeRule();
+                    var tableName = typeof(T).Name;
+                    var propertyName = tableName + "Code";
+                    var property = typeof(T).GetProperty(propertyName);
+                    var entityCode = property.GetValue(entity);
+                    var regexItem = new Regex(@"\bNV-\w+");
+                    if (regexItem.IsMatch(entityCode.ToString()))
+                    {
+                        _baseRepository.UpdateValueCodeRule();
+                    }
                     // Thêm thành công
                     serviceResult = new ServiceResult { Data = 1, MISACode = MISACode.Success };
                 }
@@ -326,6 +338,21 @@ namespace MISA.AMIS.Core.Services
             var totalEntities = _baseRepository.GetNumberEntities(filter);
             // Trả về số lượng thực thể
             return totalEntities;
+        }
+
+        /// <summary>
+        /// Lấy mã mới của bảng
+        /// </summary>
+        /// <returns>Mã mới của bảng</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        public string GetNewCode()
+        {
+            var codeRule = _baseRepository.GetCodeRule();
+            var prefix = codeRule.Prefix.Trim();
+            var valueCode = codeRule.Value;
+            var newCode = prefix + valueCode.ToString();
+            return newCode;
         }
 
         #endregion Phương thức

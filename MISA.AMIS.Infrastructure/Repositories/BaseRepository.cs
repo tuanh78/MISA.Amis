@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
+using MISA.AMIS.Core.Entities;
 using MISA.AMIS.Core.Interfaces.Repositories;
 using MySql.Data.MySqlClient;
 using System;
@@ -149,6 +150,20 @@ namespace MISA.AMIS.Infrastructure.Repositories
         }
 
         /// <summary>
+        ///
+        /// </summary>
+        /// <returns></returns>
+        public CodeRule GetCodeRule()
+        {
+            var sql = $"Proc_Get{_tableName}CodeRule";
+            var parameters = new DynamicParameters();
+            var tableName = typeof(T).Name;
+            parameters.Add("@TableName", tableName);
+            var codeRule = _dbConnection.Query<CodeRule>(sql, parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return codeRule;
+        }
+
+        /// <summary>
         /// Lấy số lượng thực thể theo điều kiện
         /// </summary>
         /// <param name="filter">Điều kiện lọc dữ liệu</param>
@@ -254,6 +269,22 @@ namespace MISA.AMIS.Infrastructure.Repositories
             // Thực thi Proc
             var rowAffects = _dbConnection.Execute(sql, parameters, commandType: CommandType.StoredProcedure);
             // Trả về số lượng bản ghi bị ảnh hưởng
+            return rowAffects;
+        }
+
+        /// <summary>
+        /// Cập nhật mã của bảng
+        /// </summary>
+        /// <returns>Số lượng bản ghi bị ảnh hưởng</returns>
+        /// CreatedDate: 17/06/2021
+        /// CreatedBy: PTANH
+        public int UpdateValueCodeRule()
+        {
+            var sql = "Proc_UpdateValueCodeRule";
+            var tableName = typeof(T).Name;
+            var parameters = new DynamicParameters();
+            parameters.Add("TableName", tableName);
+            var rowAffects = _dbConnection.Execute(sql, parameters, commandType: CommandType.StoredProcedure);
             return rowAffects;
         }
 
