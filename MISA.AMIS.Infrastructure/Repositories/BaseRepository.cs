@@ -155,10 +155,14 @@ namespace MISA.AMIS.Infrastructure.Repositories
         /// <returns></returns>
         public CodeRule GetCodeRule()
         {
+            // Tên Proc lấy quy tắc mã của bảng
             var sql = $"Proc_Get{_tableName}CodeRule";
+            // Biến chứa các tham số của Proc
             var parameters = new DynamicParameters();
+            // Tên của bảng
             var tableName = typeof(T).Name;
             parameters.Add("@TableName", tableName);
+            // Thực thi Proc
             var codeRule = _dbConnection.Query<CodeRule>(sql, parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return codeRule;
         }
@@ -280,10 +284,14 @@ namespace MISA.AMIS.Infrastructure.Repositories
         /// CreatedBy: PTANH
         public int UpdateValueCodeRule()
         {
+            // Tên Proc cập nhật mã nhân viên
             var sql = "Proc_UpdateValueCodeRule";
+            // Tên bảng
             var tableName = typeof(T).Name;
+            // Biến chứa các tham số của Proc
             var parameters = new DynamicParameters();
             parameters.Add("TableName", tableName);
+            // Thực thi Proc
             var rowAffects = _dbConnection.Execute(sql, parameters, commandType: CommandType.StoredProcedure);
             return rowAffects;
         }

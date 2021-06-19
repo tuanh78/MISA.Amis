@@ -348,9 +348,13 @@ namespace MISA.AMIS.Core.Services
         /// CreatedBy: PTANH
         public string GetNewCode()
         {
+            // Lấy nguyên tắc mã của bảng
             var codeRule = _baseRepository.GetCodeRule();
+            // Tiền tố của mã
             var prefix = codeRule.Prefix.Trim();
+            // Giá trị của mã
             var valueCode = codeRule.Value;
+            // Mã mới
             var newCode = prefix + valueCode.ToString("D4");
             return newCode;
         }
