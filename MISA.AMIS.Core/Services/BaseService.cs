@@ -354,8 +354,10 @@ namespace MISA.AMIS.Core.Services
             var prefix = codeRule.Prefix.Trim();
             // Giá trị của mã
             var valueCode = codeRule.Value;
+            // Độ dài của số trong chuỗi
+            var lengthNumberCode = codeRule.Length - prefix.Length;
             // Mã mới
-            var newCode = prefix + valueCode.ToString("D4");
+            var newCode = prefix + valueCode.ToString($"D{lengthNumberCode}");
             return newCode;
         }
 
