@@ -54,6 +54,8 @@ namespace MISA.AMIS.Core.Entities
         /// </summary>
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
+
+        [MISARequired("Phòng ban")]
         public Guid? DepartmentId { get; set; }
 
         /// <summary>
