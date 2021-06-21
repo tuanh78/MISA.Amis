@@ -120,6 +120,12 @@
   <data name="EmployeeCode_NotExists" xml:space="preserve">
     <value>Không có mã nhân viên nào</value>
   </data>
+  <data name="Error_DataInvalid" xml:space="preserve">
+    <value>Dữ liệu không hợp lệ</value>
+  </data>
+  <data name="Error_Delete" xml:space="preserve">
+    <value>Xóa không thành công</value>
+  </data>
   <data name="Error_DepartmentNotExists" xml:space="preserve">
     <value>Phòng ban không tồn tại</value>
   </data>
@@ -129,8 +135,14 @@
   <data name="Error_EmployeeCodeDuplicate" xml:space="preserve">
     <value>Mã nhân viên đã tồn tại</value>
   </data>
+  <data name="Error_Insert" xml:space="preserve">
+    <value>Không thêm được dữ liệu</value>
+  </data>
   <data name="Error_Required" xml:space="preserve">
     <value>không được để trống</value>
+  </data>
+  <data name="Error_Update" xml:space="preserve">
+    <value>Cập nhật không thành công</value>
   </data>
   <data name="Female" xml:space="preserve">
     <value>1</value>
@@ -138,7 +150,13 @@
   <data name="Male" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="No_Content" xml:space="preserve">
+    <value>Không có bản ghi nào</value>
+  </data>
   <data name="Other" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="Success_Update" xml:space="preserve">
+    <value>Cập nhật thành công</value>
   </data>
 </root>

@@ -70,6 +70,24 @@ namespace MISA.AMIS.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dữ liệu không hợp lệ.
+        /// </summary>
+        internal static string Error_DataInvalid {
+            get {
+                return ResourceManager.GetString("Error_DataInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xóa không thành công.
+        /// </summary>
+        internal static string Error_Delete {
+            get {
+                return ResourceManager.GetString("Error_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phòng ban không tồn tại.
         /// </summary>
         internal static string Error_DepartmentNotExists {
@@ -97,11 +115,29 @@ namespace MISA.AMIS.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Không thêm được dữ liệu.
+        /// </summary>
+        internal static string Error_Insert {
+            get {
+                return ResourceManager.GetString("Error_Insert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to không được để trống.
         /// </summary>
         internal static string Error_Required {
             get {
                 return ResourceManager.GetString("Error_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cập nhật không thành công.
+        /// </summary>
+        internal static string Error_Update {
+            get {
+                return ResourceManager.GetString("Error_Update", resourceCulture);
             }
         }
         
@@ -124,11 +160,29 @@ namespace MISA.AMIS.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Không có bản ghi nào.
+        /// </summary>
+        internal static string No_Content {
+            get {
+                return ResourceManager.GetString("No_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
         internal static string Other {
             get {
                 return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cập nhật thành công.
+        /// </summary>
+        internal static string Success_Update {
+            get {
+                return ResourceManager.GetString("Success_Update", resourceCulture);
             }
         }
     }
