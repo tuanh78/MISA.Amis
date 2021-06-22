@@ -143,7 +143,7 @@ namespace MISA.AMIS.Core.Services
             // Validate dữ liệu
             _serviceResult = ValidateData(entity);
             // Kiểm tra dữ liệu có hợp lệ khay không
-            if (_serviceResult.MISACode == MISACode.InvalidValue)
+            if (_serviceResult.MISACode == MISACode.InvalidValue || _serviceResult.MISACode == MISACode.ValueEmpty)
             {
                 // Dữ liệu không hợp lệ
                 return _serviceResult;
@@ -195,7 +195,7 @@ namespace MISA.AMIS.Core.Services
             // Validate dữ liệu
             _serviceResult = ValidateData(entity);
             // Kiểm tra xem dữ liệu có hợp lệ hay không
-            if (_serviceResult.MISACode == MISACode.InvalidValue)
+            if (_serviceResult.MISACode == MISACode.InvalidValue || _serviceResult.MISACode == MISACode.ValueEmpty)
             {
                 // Dữ liệu không hợp lệ
                 return _serviceResult;
@@ -266,7 +266,7 @@ namespace MISA.AMIS.Core.Services
                         // Thêm property lỗi và thông báo lỗi vào danh sách property lỗi
                         serviceResult.PropertyInvalidLists.Add(new PropertyInvalidList { ErrorMessage = customErrorMessage, PropertyName = errorPropertyName });
                         // Gán mã lỗi không hợp lệ
-                        serviceResult.MISACode = MISACode.InvalidValue;
+                        serviceResult.MISACode = MISACode.ValueEmpty;
                         // Gán thông báo lỗi chung
                         serviceResult.ErrorMessage = MessageResouce.DataInvalid;
                         // Trả về kết quả thực hiện

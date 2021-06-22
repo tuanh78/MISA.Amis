@@ -33,6 +33,13 @@
         /// </summary>
         /// CreatedDate: 13/06/2021
         /// CreatedBy: PTANH
-        NoContent = 204
+        NoContent = 204,
+
+        /// <summary>
+        /// Giá trị để trống yêu cầu nhập lại
+        /// CreatedDate: 22/06/2021
+        /// CreatedBy: PTANH
+        /// </summary>
+        ValueEmpty = 650
     }
 }
