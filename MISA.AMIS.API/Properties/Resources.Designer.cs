@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MISA.AMIS.Core.Properties {
+namespace MISA.AMIS.API.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MISA.AMIS.Core.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MISA.AMIS.Core.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MISA.AMIS.API.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,11 @@ namespace MISA.AMIS.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.
+        ///   Looks up a localized string similar to Thêm thành công.
         /// </summary>
-        internal static string Female {
+        internal static string AddSuccess {
             get {
-                return ResourceManager.GetString("Female", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0.
-        /// </summary>
-        internal static string Male {
-            get {
-                return ResourceManager.GetString("Male", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 2.
-        /// </summary>
-        internal static string Other {
-            get {
-                return ResourceManager.GetString("Other", resourceCulture);
+                return ResourceManager.GetString("AddSuccess", resourceCulture);
             }
         }
     }

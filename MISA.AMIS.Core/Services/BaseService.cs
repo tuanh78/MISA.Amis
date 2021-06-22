@@ -78,7 +78,7 @@ namespace MISA.AMIS.Core.Services
             // Thất bại
             else
             {
-                serviceResult = new ServiceResult { ErrorMessage = Resources.Error_Delete, MISACode = MISACode.InvalidValue };
+                serviceResult = new ServiceResult { ErrorMessage = MessageResouce.ErrorDelete, MISACode = MISACode.InvalidValue };
             }
             // Trả về kết quả
             return serviceResult;
@@ -115,7 +115,7 @@ namespace MISA.AMIS.Core.Services
             if (entity == null)
             {
                 // Gán thông báo lỗi
-                serviceResult.ErrorMessage = Resources.No_Content;
+                serviceResult.ErrorMessage = MessageResouce.NoContent;
                 // Gán mã không có nội dung
                 serviceResult.MISACode = MISACode.NoContent;
             }
@@ -175,7 +175,7 @@ namespace MISA.AMIS.Core.Services
                 // Thêm thất bại
                 else
                 {
-                    serviceResult = new ServiceResult { Data = 0, ErrorMessage = Resources.Error_Insert, MISACode = MISACode.InvalidValue };
+                    serviceResult = new ServiceResult { Data = 0, ErrorMessage = MessageResouce.ErrorInsert, MISACode = MISACode.InvalidValue };
                 }
                 // Trả về kết quả thực hiện
                 return serviceResult;
@@ -210,13 +210,13 @@ namespace MISA.AMIS.Core.Services
                 if (rowAffects == 1)
                 {
                     _serviceResult.MISACode = MISACode.Success;
-                    _serviceResult.Data = Resources.Success_Update;
+                    _serviceResult.Data = MessageResouce.SuccessUpdate;
                 }
                 //Cập nhật thất bại
                 else
                 {
                     _serviceResult.MISACode = MISACode.InvalidValue;
-                    _serviceResult.Data = Resources.Error_Update;
+                    _serviceResult.Data = MessageResouce.ErrorUpdate;
                 }
                 // Trả về kết quả thực hiện
                 return _serviceResult;
@@ -262,13 +262,13 @@ namespace MISA.AMIS.Core.Services
                         // Lấy tên của thuộc tính bị lỗi
                         var errorPropertyName = Char.ToLowerInvariant(property.Name[0]) + property.Name[1..];
                         // Nếu thông báo lỗi = null thì gán thông báo ngược lai thì lấy thông báo lỗi đó
-                        var customErrorMessage = errorMessage == null ? $"{propertyName} {Resources.Error_Required}" : errorMessage.ToString();
+                        var customErrorMessage = errorMessage == null ? $"{propertyName} {MessageResouce.ErrorRequired}" : errorMessage.ToString();
                         // Thêm property lỗi và thông báo lỗi vào danh sách property lỗi
                         serviceResult.PropertyInvalidLists.Add(new PropertyInvalidList { ErrorMessage = customErrorMessage, PropertyName = errorPropertyName });
                         // Gán mã lỗi không hợp lệ
                         serviceResult.MISACode = MISACode.InvalidValue;
                         // Gán thông báo lỗi chung
-                        serviceResult.ErrorMessage = Resources.Error_DataInvalid;
+                        serviceResult.ErrorMessage = MessageResouce.DataInvalid;
                         // Trả về kết quả thực hiện
                         return serviceResult;
                     }

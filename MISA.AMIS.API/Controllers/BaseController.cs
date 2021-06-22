@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MISA.AMIS.API.Properties;
 using MISA.AMIS.Core.Enums;
 using MISA.AMIS.Core.Interfaces.Services;
 using System;
@@ -115,7 +116,7 @@ namespace MISA.AMIS.API.Controllers
             // Nếu thành công
             if (serviceResult.MISACode == MISACode.Success)
             {
-                return Created("Thêm thành công", serviceResult.Data);
+                return Created(Resources.AddSuccess, serviceResult.Data);
             }
             // Thêm thất bại
             return BadRequest(serviceResult);

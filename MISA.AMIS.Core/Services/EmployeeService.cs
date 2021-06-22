@@ -66,11 +66,11 @@ namespace MISA.AMIS.Core.Services
             if (checkEmployeeCode != false)
             {
                 // Khởi tạo đối tượng chứa danh sách property lỗi
-                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = Resources.Error_EmployeeCodeDuplicate, PropertyName = "employeeCode" };
+                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = MessageResouce.EmployeeCodeDuplicate, PropertyName = "employeeCode" };
                 // Thêm đối tượng lỗi vào list
                 serviceResult.PropertyInvalidLists.Add(propertyInvalid);
                 // Gán lỗi thông báo chung
-                serviceResult.ErrorMessage = Resources.Error_EmployeeCodeDuplicate; serviceResult.MISACode = MISACode.InvalidValue;
+                serviceResult.ErrorMessage = MessageResouce.EmployeeCodeDuplicate; serviceResult.MISACode = MISACode.InvalidValue;
                 // Trả về kết quả thực hiện
                 return serviceResult;
             }
@@ -89,11 +89,11 @@ namespace MISA.AMIS.Core.Services
             if (checkEmail == false && entity.Email != null && entity.Email != string.Empty)
             {
                 // Khởi tạo đối tượng chứa thông tin lỗi và tên trường lỗi
-                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = Resources.Error_EmailFormat, PropertyName = "email" };
+                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = MessageResouce.EmailInvalid, PropertyName = "email" };
                 // Thêm đối tượng vừa rồi vào danh sách lỗi
                 serviceResult.PropertyInvalidLists.Add(propertyInvalid);
                 // Gán thông báo lỗi chung
-                serviceResult.ErrorMessage = Resources.Error_EmailFormat;
+                serviceResult.ErrorMessage = MessageResouce.EmailInvalid;
                 // Gán mã dữ liệu không hợp lệ
                 serviceResult.MISACode = MISACode.InvalidValue;
                 // Trả về kết quả thực hiện
@@ -105,11 +105,11 @@ namespace MISA.AMIS.Core.Services
             if (checkDepartmentExists == false)
             {
                 // Khởi tạo đói tượng chứa thuộc tính lỗi và thông báo lỗi
-                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = Resources.Error_DepartmentNotExists, PropertyName = "departmentId" };
+                var propertyInvalid = new PropertyInvalidList() { ErrorMessage = MessageResouce.DepartmentNotExists, PropertyName = "departmentId" };
                 // Thêm đối tượng vừa rồi vào danh sách lỗi
                 serviceResult.PropertyInvalidLists.Add(propertyInvalid);
                 // Gán thông báo lỗi chung
-                serviceResult.ErrorMessage = Resources.Error_DepartmentNotExists;
+                serviceResult.ErrorMessage = MessageResouce.DepartmentNotExists;
                 // Gán mã dữ liệu không hợp lệ
                 serviceResult.MISACode = MISACode.InvalidValue;
                 // Trả về kết quả thực hiện
@@ -189,10 +189,13 @@ namespace MISA.AMIS.Core.Services
                 workSheet.Cells[i + 4, 7].Value = e.DepartmentName;
                 workSheet.Cells[i + 4, 8].Value = e.BankAccountNumber;
                 workSheet.Cells[i + 4, 9].Value = e.BankName;
-
                 using (var range = workSheet.Cells[i + 4, 1, i + 4, 9])
                 {
                     range.Style.Border.BorderAround(ExcelBorderStyle.Thin);
+                }
+                using (var range = workSheet.Cells[i + 4, 5])
+                {
+                    range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 }
 
                 i++;

@@ -23,6 +23,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>GenderResource.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Properties\MessageResouce.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>MessageResouce.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Properties\Resources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -38,6 +43,10 @@
 	  <EmbeddedResource Update="Properties\GenderResource.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>GenderResource.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Properties\MessageResouce.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>MessageResouce.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Properties\Resources.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
