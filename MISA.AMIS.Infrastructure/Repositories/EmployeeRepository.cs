@@ -67,7 +67,7 @@ namespace MISA.AMIS.Infrastructure.Repositories
             // Thêm tham số Id của nhân viên
             parameters.Add("@EmployeeId", entity.EmployeeId);
             // Thêm tham số mã của nhân viên
-            parameters.Add("@EmployeeCode", entity.EmployeeCode);
+            parameters.Add("@EmployeeCode", entity.EmployeeCode.Trim());
             // Thực thi Proc
             var result = _dbConnection.Query<bool>(sql, parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
             // Trả về đúng hoặc sai

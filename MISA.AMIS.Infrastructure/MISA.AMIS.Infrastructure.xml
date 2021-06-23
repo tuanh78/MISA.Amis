@@ -80,6 +80,7 @@
         </member>
         <member name="M:MISA.AMIS.Infrastructure.Repositories.BaseRepository`1.GetCodeRule">
              <summary>
+            
              </summary>
              <returns></returns>
         </member>

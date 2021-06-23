@@ -212,6 +212,11 @@ namespace MISA.AMIS.Infrastructure.Repositories
                 var propertyValue = property.GetValue(entity);
                 // Lấy kiểu của thuộc tính
                 var propertyType = property.PropertyType;
+                // Cắt bỏ khoảng trắng ở hai đầu của dữ liệu nếu không null hoặc không phải là chuỗi trống
+                if (propertyValue != null && !string.IsNullOrEmpty(propertyValue.ToString()) && propertyType == typeof(string))
+                {
+                    propertyValue = propertyValue.ToString().Trim();
+                }
                 // Kiểm trả kiểu của thuộc tính có phải kiểu Guid không
                 if (propertyType == typeof(Guid) || propertyType == typeof(Guid?))
                 {
@@ -255,6 +260,11 @@ namespace MISA.AMIS.Infrastructure.Repositories
                 var propertyValue = property.GetValue(entity);
                 // Lấy kiểu của thuộc tính
                 var propertyType = property.PropertyType;
+                // Cắt bỏ khoảng trắng ở hai đầu của dữ liệu nếu không null hoặc không phải là chuỗi trống
+                if (propertyValue != null && !string.IsNullOrEmpty(propertyValue.ToString()) && propertyType == typeof(string))
+                {
+                    propertyValue = propertyValue.ToString().Trim();
+                }
                 // Kiểm trả kiểu của thuộc tính có phải kiểu Guid không
                 if (propertyType == typeof(Guid) || propertyType == typeof(Guid?))
                 {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MISA.AMIS.Core.Entities;
 using MISA.AMIS.Core.Interfaces.Services;
+using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -53,17 +54,24 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("Export")]
         public IActionResult Export()
         {
-            // Kết quả xuất file excel
-            var result = _employeeService.ExportExcel();
-            // Nếu xuất thành công
-            if (result != null)
+            try
             {
-                return File(result.FileStream, result.FileContent, result.FileName);
+                // Kết quả xuất file excel
+                var result = _employeeService.ExportExcel();
+                // Nếu xuất thành công
+                if (result != null)
+                {
+                    return File(result.FileStream, result.FileContent, result.FileName);
+                }
+                // Thất bại
+                else
+                {
+                    return NoContent();
+                }
             }
-            // Thất bại
-            else
+            catch (Exception)
             {
-                return NoContent();
+                throw;
             }
         }
 

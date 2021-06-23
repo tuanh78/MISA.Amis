@@ -55,10 +55,17 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            // Lấy danh sách thực thể
-            var entities = _baseService.GetEntities();
-            // Trả về danh sách thực thể
-            return Ok(entities);
+            try
+            {
+                // Lấy danh sách thực thể
+                var entities = _baseService.GetEntities();
+                // Trả về danh sách thực thể
+                return Ok(entities);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -72,15 +79,22 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            // Kết quả lấy thực thể theo Id
-            var serviceResult = _baseService.GetEntityById(id);
-            // Nếu thành công
-            if (serviceResult.MISACode == MISACode.Success)
+            try
             {
-                return Ok(serviceResult.Data);
+                // Kết quả lấy thực thể theo Id
+                var serviceResult = _baseService.GetEntityById(id);
+                // Nếu thành công
+                if (serviceResult.MISACode == MISACode.Success)
+                {
+                    return Ok(serviceResult.Data);
+                }
+                // Không có dữ liệu
+                return StatusCode(204, serviceResult);
             }
-            // Không có dữ liệu
-            return StatusCode(204, serviceResult);
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -94,10 +108,17 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("numbers-record")]
         public IActionResult GetNumberEntities([FromQuery] string filter)
         {
-            // Số lượng thực thể
-            var totalEntities = _baseService.GetNumberEntities(filter);
-            // Trả về số lượng thực thể
-            return Ok(totalEntities);
+            try
+            {
+                // Số lượng thực thể
+                var totalEntities = _baseService.GetNumberEntities(filter);
+                // Trả về số lượng thực thể
+                return Ok(totalEntities);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -111,15 +132,22 @@ namespace MISA.AMIS.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] T entity)
         {
-            // Kết quả thêm thực thể
-            var serviceResult = _baseService.InsertEntity(entity);
-            // Nếu thành công
-            if (serviceResult.MISACode == MISACode.Success)
+            try
             {
-                return Created(Resources.AddSuccess, serviceResult.Data);
+                // Kết quả thêm thực thể
+                var serviceResult = _baseService.InsertEntity(entity);
+                // Nếu thành công
+                if (serviceResult.MISACode == MISACode.Success)
+                {
+                    return Created(Resources.AddSuccess, serviceResult.Data);
+                }
+                // Thêm thất bại
+                return BadRequest(serviceResult);
             }
-            // Thêm thất bại
-            return BadRequest(serviceResult);
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -134,16 +162,23 @@ namespace MISA.AMIS.API.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, [FromBody] T entity)
         {
-            // Kết quả sửa thực thể
-            var serviceResult = _baseService.UpdateEntity(entity, id);
-            // Trả về kết quả
-            // Nếu thành công
-            if (serviceResult.MISACode == MISACode.Success)
+            try
             {
-                return Ok(serviceResult);
+                // Kết quả sửa thực thể
+                var serviceResult = _baseService.UpdateEntity(entity, id);
+                // Trả về kết quả
+                // Nếu thành công
+                if (serviceResult.MISACode == MISACode.Success)
+                {
+                    return Ok(serviceResult);
+                }
+                // Thêm thất bại
+                return BadRequest(serviceResult);
             }
-            // Thêm thất bại
-            return BadRequest(serviceResult);
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>
@@ -157,17 +192,24 @@ namespace MISA.AMIS.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            // Kết quả xóa thực thể khỏi csdl
-            var serviceResult = _baseService.DeleteEntity(id);
-            // Nếu xóa thành công
-            if (serviceResult.MISACode == MISACode.Success)
+            try
             {
-                return StatusCode(StatusCodes.Status200OK);
+                // Kết quả xóa thực thể khỏi csdl
+                var serviceResult = _baseService.DeleteEntity(id);
+                // Nếu xóa thành công
+                if (serviceResult.MISACode == MISACode.Success)
+                {
+                    return StatusCode(StatusCodes.Status200OK);
+                }
+                // Xóa thất bại
+                else
+                {
+                    return StatusCode(400, serviceResult);
+                }
             }
-            // Xóa thất bại
-            else
+            catch (Exception)
             {
-                return StatusCode(400, serviceResult);
+                throw;
             }
         }
 
@@ -184,18 +226,25 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("paging")]
         public IActionResult GetPaging([FromQuery] int pageIndex, [FromQuery] int pageSize, [FromQuery] string filter)
         {
-            // Kết quả lấy danh sách thực thể theo điều kiện
-            var serviceResult = _baseService.GetEntitiesPaging(pageIndex, pageSize, filter);
-            // Kiểm tra xem có thành công hay không
-            // Nếu thành công
-            if (serviceResult.MISACode == MISACode.Success)
+            try
             {
-                return Ok(serviceResult.Data);
+                // Kết quả lấy danh sách thực thể theo điều kiện
+                var serviceResult = _baseService.GetEntitiesPaging(pageIndex, pageSize, filter);
+                // Kiểm tra xem có thành công hay không
+                // Nếu thành công
+                if (serviceResult.MISACode == MISACode.Success)
+                {
+                    return Ok(serviceResult.Data);
+                }
+                // Không có dữ liệu
+                else
+                {
+                    return NoContent();
+                }
             }
-            // Không có dữ liệu
-            else
+            catch (Exception)
             {
-                return NoContent();
+                throw;
             }
         }
 
@@ -208,8 +257,15 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("new-code")]
         public IActionResult GetNewCode()
         {
-            var newCode = _baseService.GetNewCode();
-            return Ok(newCode);
+            try
+            {
+                var newCode = _baseService.GetNewCode();
+                return Ok(newCode);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         #endregion Phương thức

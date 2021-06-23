@@ -159,7 +159,7 @@ namespace MISA.AMIS.Core.Services
                 if (rowAffects == 1)
                 {
                     // Cập nhật mã của bảng
-                    var codeRule = _baseRepository.GetCodeRule();
+                    //var codeRule = _baseRepository.GetCodeRule();
                     var tableName = typeof(T).Name;
                     var propertyName = tableName + "Code";
                     var property = typeof(T).GetProperty(propertyName);
