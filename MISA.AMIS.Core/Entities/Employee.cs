@@ -1,5 +1,4 @@
 ﻿using MISA.AMIS.Core.Enums;
-using MISA.AMIS.Core.Properties;
 using System;
 using static MISA.AMIS.Core.Attributes.MISAAttribute;
 

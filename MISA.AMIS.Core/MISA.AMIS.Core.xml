@@ -450,6 +450,13 @@
             CreatedDate: 13/06/2021
             CreatedBy: PTANH
         </member>
+        <member name="F:MISA.AMIS.Core.Enums.MISACode.ValueEmpty">
+            <summary>
+            Giá trị để trống yêu cầu nhập lại
+            CreatedDate: 22/06/2021
+            CreatedBy: PTANH
+            </summary>
+        </member>
         <member name="T:MISA.AMIS.Core.Interfaces.Repositories.IBaseRepository`1">
             <summary>
             Interface Repository với những hàm dùng chung
@@ -817,6 +824,77 @@
               Looks up a localized string similar to Không xác định.
             </summary>
         </member>
+        <member name="T:MISA.AMIS.Core.Properties.MessageResouce">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.DataInvalid">
+            <summary>
+              Looks up a localized string similar to Dữ liệu không hợp lệ.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.DepartmentNotExists">
+            <summary>
+              Looks up a localized string similar to Phòng ban không tồn tại.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.EmailInvalid">
+            <summary>
+              Looks up a localized string similar to Địa chỉ Email không hợp lệ.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.EmployeeCodeDuplicate">
+            <summary>
+              Looks up a localized string similar to Mã nhân viên đã tồn tại.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.EmployeeCodeNotExists">
+            <summary>
+              Looks up a localized string similar to Không có mã nhân viên nào.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.ErrorDelete">
+            <summary>
+              Looks up a localized string similar to Xóa không thành công.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.ErrorInsert">
+            <summary>
+              Looks up a localized string similar to Không thêm được dữ liệu.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.ErrorRequired">
+            <summary>
+              Looks up a localized string similar to không được để trống.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.ErrorUpdate">
+            <summary>
+              Looks up a localized string similar to Cập nhật không thành công.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.NoContent">
+            <summary>
+              Looks up a localized string similar to Không có bản ghi nào.
+            </summary>
+        </member>
+        <member name="P:MISA.AMIS.Core.Properties.MessageResouce.SuccessUpdate">
+            <summary>
+              Looks up a localized string similar to Cập nhật thành công.
+            </summary>
+        </member>
         <member name="T:MISA.AMIS.Core.Properties.Resources">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -831,31 +909,6 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:MISA.AMIS.Core.Properties.Resources.EmployeeCode_NotExists">
-            <summary>
-              Looks up a localized string similar to Không có mã nhân viên nào.
-            </summary>
-        </member>
-        <member name="P:MISA.AMIS.Core.Properties.Resources.Error_DepartmentNotExists">
-            <summary>
-              Looks up a localized string similar to Phòng ban không tồn tại.
-            </summary>
-        </member>
-        <member name="P:MISA.AMIS.Core.Properties.Resources.Error_EmailFormat">
-            <summary>
-              Looks up a localized string similar to Địa chỉ Email không hợp lệ.
-            </summary>
-        </member>
-        <member name="P:MISA.AMIS.Core.Properties.Resources.Error_EmployeeCodeDuplicate">
-            <summary>
-              Looks up a localized string similar to Mã nhân viên đã tồn tại.
-            </summary>
-        </member>
-        <member name="P:MISA.AMIS.Core.Properties.Resources.Error_Required">
-            <summary>
-              Looks up a localized string similar to không được để trống.
             </summary>
         </member>
         <member name="P:MISA.AMIS.Core.Properties.Resources.Female">

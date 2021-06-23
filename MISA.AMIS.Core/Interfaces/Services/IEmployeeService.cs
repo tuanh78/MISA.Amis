@@ -1,5 +1,4 @@
 ﻿using MISA.AMIS.Core.Entities;
-using System.Threading.Tasks;
 
 namespace MISA.AMIS.Core.Interfaces.Services
 {
