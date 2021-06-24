@@ -72,9 +72,6 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            var a = 0;
-            var b = 1;
-            var c = b / a;
             // Kết quả lấy thực thể theo Id
             var serviceResult = _baseService.GetEntityById(id);
             // Nếu thành công
