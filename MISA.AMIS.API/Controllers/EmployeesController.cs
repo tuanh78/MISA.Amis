@@ -54,24 +54,17 @@ namespace MISA.AMIS.API.Controllers
         [HttpGet("Export")]
         public IActionResult Export()
         {
-            try
+            // Kết quả xuất file excel
+            var result = _employeeService.ExportExcel();
+            // Nếu xuất thành công
+            if (result != null)
             {
-                // Kết quả xuất file excel
-                var result = _employeeService.ExportExcel();
-                // Nếu xuất thành công
-                if (result != null)
-                {
-                    return File(result.FileStream, result.FileContent, result.FileName);
-                }
-                // Thất bại
-                else
-                {
-                    return NoContent();
-                }
+                return File(result.FileStream, result.FileContent, result.FileName);
             }
-            catch (Exception)
+            // Thất bại
+            else
             {
-                throw;
+                return NoContent();
             }
         }
 

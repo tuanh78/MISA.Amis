@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using MISA.AMIS.API.Properties;
 using MISA.AMIS.Core.Entities;
+using MISA.AMIS.Core.Enums;
 using MISA.AMIS.Core.Interfaces.Repositories;
 using MISA.AMIS.Core.Interfaces.Services;
 using MISA.AMIS.Core.Services;
@@ -76,7 +78,14 @@ namespace MISA.AMIS.API
                 var exception = context.Features
                     .Get<IExceptionHandlerPathFeature>()
                     .Error;
-                var response = new { error = exception.Message };
+                var response = new
+                {
+                    userMsg = Resources.ErrorSystem,
+                    devMsg = exception.Message,
+                    data = exception.Data,
+                    traceInfor = exception.StackTrace,
+                    statusCode = MISACode.ErrorSystem
+                };
                 await context.Response.WriteAsJsonAsync(response);
             }));
 

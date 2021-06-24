@@ -40,6 +40,13 @@
         /// CreatedDate: 22/06/2021
         /// CreatedBy: PTANH
         /// </summary>
-        ValueEmpty = 650
+        ValueEmpty = 650,
+
+        /// <summary>
+        /// Lỗi hệ thống
+        /// CreatedDate: 22/06/2021
+        /// CreatedBy: PTANH
+        /// </summary>
+        ErrorSystem = 500
     }
 }

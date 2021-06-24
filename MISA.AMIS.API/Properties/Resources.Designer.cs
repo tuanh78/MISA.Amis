@@ -68,5 +68,14 @@ namespace MISA.AMIS.API.Properties {
                 return ResourceManager.GetString("AddSuccess", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Có lỗi xảy ra, vui lòng liên hệ MISA để được trợ giúp.
+        /// </summary>
+        internal static string ErrorSystem {
+            get {
+                return ResourceManager.GetString("ErrorSystem", resourceCulture);
+            }
+        }
     }
 }

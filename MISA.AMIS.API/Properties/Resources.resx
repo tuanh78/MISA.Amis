@@ -120,4 +120,7 @@
   <data name="AddSuccess" xml:space="preserve">
     <value>Thêm thành công</value>
   </data>
+  <data name="ErrorSystem" xml:space="preserve">
+    <value>Có lỗi xảy ra, vui lòng liên hệ MISA để được trợ giúp</value>
+  </data>
 </root>
